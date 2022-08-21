@@ -126,6 +126,7 @@ class Game extends React.Component<{}, GameState> {
 
     return (
       <div className="game">
+        <p>Homepage</p>
         <div className="game-board">
           <Board squares = {current}
               onClick = {(i) => this.handleClick(i)}/>
