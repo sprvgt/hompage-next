@@ -1,50 +1,41 @@
 body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
-ol, ul {
-  padding-left: 30px;
-}
-
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.status {
-  margin-bottom: 10px;
-}
-
-.square {
-  background: #fff;
-  border: 1px solid #999;
-  float: left;
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 34px;
-  height: 34px;
-  margin-right: -1px;
-  margin-top: -1px;
-  padding: 0;
-  text-align: center;
-  width: 34px;
-}
-
-.square:focus {
-  outline: none;
-}
-
-.kbd-navigation .square:focus {
-  background: #ddd;
-}
-
-.game {
+.profile {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
 }
 
-.game-info {
-  margin-left: 20px;
+.name {
+  font-weight: 500;
+}
+
+.intro-first {
+  margin-bottom: 16px;
+}
+
+.profile-image {
+  padding: 4px;
+  width:220px;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  transition: all .2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* On desktop screen. */
+@media only screen and (min-width: 768px) {
+  .profile {
+    flex-direction: row;
+    align-items: normal;
+  }
+  
+  .profile-image {
+    margin-right: 30px;
+  }
 }
