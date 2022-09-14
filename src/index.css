@@ -16,6 +16,14 @@ body {
   margin-bottom: 16px;
 }
 
+.intro-second {
+  margin-bottom: 16px;
+}
+
+.note{
+  font-weight: bold;
+}
+
 .profile-image {
   padding: 4px;
   width:220px;

@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom';
+import { Email } from 'react-obfuscate-email';
 import './index.css';
 
 import profileImage from './images/me.jpeg';
@@ -30,6 +31,7 @@ function Introduction() {
         from <a 
             href="https://english.pku.edu.cn/">Peking University</a>. 
       </div>
+      <span className="note">Email: </span><Email email="luxuan@umich.edu" />
     </div>
   )
 }
