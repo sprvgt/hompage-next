@@ -126,6 +126,16 @@ function Awards() {
   )
 }
 
+function BuildInfo() {
+  return (
+    <div className="segment">
+      <div className="segment-content">
+        Maintained by Xuan Lu, last updated on {{new Date(buildInfo.buildDate)}}.
+      </div>
+    </div>
+  )
+}
+
 function Main() {
   return (
     <div>
