@@ -13,6 +13,9 @@ body {
   max-width: 970px;
   margin-left:auto;
   margin-right:auto;
+  font-size: 12px;
+  line-height: 16px;
+  color: darkgrey;
 }
 
 .profile {
@@ -51,7 +54,7 @@ body {
 }
 
 .segment { 
-  border-top: 1px solid #f6f6f6;
+  border-top: 1px solid #d2d2d2;
 }
 
 .segment-title {
