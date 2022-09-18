@@ -5,6 +5,13 @@ import './index.css';
 import buildInfo from './buildInfo';
 import profileImage from './images/me.jpeg';
 
+const buildDate = new Date(buildInfo.buildDate).toLocaleDateString('en-US',
+{
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+});
+
 function ProfileImage() {
   return <img 
       src={profileImage} className="profile-image" alt="Profile Image" />;
@@ -82,22 +89,22 @@ function AcademicServices() {
         Academic Services
       </div>
       <ul>
-        <li>PC member, ACM International WSDM Conference (WSDM, 2021, 2022)</li>
-        <li>PC member, ACM International Conference on Information and Knowledge Management (CIKM, 2021, 2022)</li>
-        <li>PC member, ACM SIGKDD Conference on Knowledge Discovery and Data Mining, Applied Data Science Track (KDD ADS track, 2021, 2022)</li>
-        <li>PC member, International Workshop on Emoji Understanding and Applications in Social Media (EMOJI, 2021, 2022)</li>
-        <li>PC member, International ACM SIGIR Conference on Research and Development in Information Retrieval, short paper (SIGIR short paper, 2021)</li>
-        <li>PC member, IEEE International Conference on Cloud Computing (IEEE CLOUD, 2020)</li>
-        <li>Reviewer for IEEE Transactions on Services Computing (TSC, 2021, 2022)</li>
-        <li>Reviewer for IEEE Transactions on Software Engineering (TSE, 2021)</li>
-        <li>Reviewer for ACM Transactions on Intelligent Systems and Technology (TIST, 2021)</li>
-        <li>Reviewer for Frontiers in Big Data (2021)</li>
-        <li>Reviewer for International Journal of Human-Computer Interaction (IJHCI, 2021)</li>
-        <li>Reviewer for ACM Transactions on the Web (TWEB, 2020, 2022)</li>
-        <li>Reviewer for Journal of Biomedical Informatics (JBI, 2020)</li>
-        <li>Reviewer for Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT, 2018)</li>
-        <li>External reviewer for ACM SIGKDD conference on Knowledge Discovery and Data Mining (KDD 2017, 2018, 2019)</li>
-        <li>External reviewer for International Conference on Mining Software Repositories (MSR 2017)</li>
+        <li>PC member, <i>ACM International WSDM Conference (WSDM, 2021, 2022)</i></li>
+        <li>PC member, <i>ACM International Conference on Information and Knowledge Management (CIKM, 2021, 2022)</i></li>
+        <li>PC member, <i>ACM SIGKDD Conference on Knowledge Discovery and Data Mining, Applied Data Science Track (KDD ADS track, 2021, 2022)</i></li>
+        <li>PC member, <i>International Workshop on Emoji Understanding and Applications in Social Media (EMOJI, 2021, 2022)</i></li>
+        <li>PC member, <i>International ACM SIGIR Conference on Research and Development in Information Retrieval, short paper (SIGIR short paper, 2021)</i></li>
+        <li>PC member, <i>IEEE International Conference on Cloud Computing (IEEE CLOUD, 2020)</i></li>
+        <li>Reviewer for <i>IEEE Transactions on Services Computing (TSC, 2021, 2022)</i></li>
+        <li>Reviewer for <i>IEEE Transactions on Software Engineering (TSE, 2021)</i></li>
+        <li>Reviewer for <i>ACM Transactions on Intelligent Systems and Technology (TIST, 2021)</i></li>
+        <li>Reviewer for <i>Frontiers in Big Data (2021)</i></li>
+        <li>Reviewer for <i>International Journal of Human-Computer Interaction (IJHCI, 2021)</i></li>
+        <li>Reviewer for <i>ACM Transactions on the Web (TWEB, 2020, 2022)</i></li>
+        <li>Reviewer for <i>Journal of Biomedical Informatics (JBI, 2020)</i></li>
+        <li>Reviewer for <i>Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT, 2018)</i></li>
+        <li>External reviewer for <i>ACM SIGKDD conference on Knowledge Discovery and Data Mining (KDD 2017, 2018, 2019)</i></li>
+        <li>External reviewer for <i>International Conference on Mining Software Repositories (MSR 2017)</i></li>
       </ul>
     </div>
   )
@@ -130,8 +137,28 @@ function BuildInfo() {
   return (
     <div className="segment">
       <div className="segment-content">
-        Maintained by Xuan Lu, last updated on {{new Date(buildInfo.buildDate)}}.
+        · Maintained by Xuan Lu, last updated on {buildDate}.
       </div>
+    </div>
+  )
+}
+
+function Body() {
+  return (
+    <div className="body-content">
+      <Profile />
+      <Education />
+      <ResearchInterests />
+      <AcademicServices />
+      <Awards />
+    </div>
+  )
+}
+
+function Footnote() {
+  return (
+    <div className="footnote">
+      <BuildInfo />
     </div>
   )
 }
@@ -139,11 +166,8 @@ function BuildInfo() {
 function Main() {
   return (
     <div>
-      <Profile />
-      <Education />
-      <ResearchInterests />
-      <AcademicServices />
-      <Awards />
+      <Body />
+      <Footnote />
     </div>
   )
 }

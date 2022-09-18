@@ -1,5 +1,18 @@
 body {
   font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 24px;
+}
+
+.body-content {
+  max-width: 768px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.footnote {
+  max-width: 970px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .profile {
