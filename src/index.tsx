@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import { Email } from 'react-obfuscate-email';
 import './index.css';
 
+import buildInfo from './buildInfo';
 import profileImage from './images/me.jpeg';
 
 function ProfileImage() {
