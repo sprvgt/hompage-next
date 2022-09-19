@@ -69,6 +69,15 @@ body {
   margin-bottom: 16px;
 }
 
+.segment-subtitle {
+  font-size: 18px;
+  margin-bottom: -10px;
+}
+
+.publication-entry {
+  margin-top: 10px;
+}
+
 /* On desktop screen. */
 @media only screen and (min-width: 768px) {
   .profile {
@@ -79,4 +88,27 @@ body {
   .profile-image {
     margin-right: 30px;
   }
+}
+
+span {
+  margin-right: 5px;
+}
+
+a:hover, a:focus {
+  color: #134fb8;
+  text-decoration: underline;
+}
+
+a {
+  color: #f0ad43;
+  text-decoration: none;
+}
+
+.highlights {
+  color: red;
+  font-weight: bold;
+}
+
+.side-notes {
+  margin-left: 12px;
 }

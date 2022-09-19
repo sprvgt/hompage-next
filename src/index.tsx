@@ -5,7 +5,7 @@ import './index.css';
 
 import buildInfo from './buildInfo';
 import profileImage from './images/me.jpeg';
-import publications from  './publication';
+import { publications } from  './publication';
 
 const buildDate = new Date(buildInfo.buildDate).toLocaleDateString('en-US',
 {
